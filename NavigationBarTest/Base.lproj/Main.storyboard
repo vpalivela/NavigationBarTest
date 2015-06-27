@@ -27,7 +27,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="WDy-lx-O3d" kind="show" id="XGP-JA-29r"/>
+                                    <segue destination="fM9-Iy-AlG" kind="show" id="XGP-JA-29r"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORb-Ng-c43">
@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="298" y="1237"/>
         </scene>
-        <!--Extended Push-->
+        <!--Extended-->
         <scene sceneID="1Yc-1h-asX">
             <objects>
-                <viewController title="Extended Push" id="WDy-lx-O3d" sceneMemberID="viewController">
+                <viewController id="WDy-lx-O3d" customClass="ExentedViewController" customModule="NavigationBarTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hN9-FN-rsh"/>
                         <viewControllerLayoutGuide type="bottom" id="gx1-K8-nTB"/>
@@ -87,12 +87,36 @@
                     <view key="view" contentMode="scaleToFill" id="B4V-Qz-D2L">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Extended View" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bp-SU-U2y">
+                                <rect key="frame" x="16" y="72" width="276" height="91"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91" id="M64-Yx-8eo"/>
+                                    <constraint firstAttribute="width" constant="276" id="k2h-8R-6bD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4bp-SU-U2y" firstAttribute="leading" secondItem="B4V-Qz-D2L" secondAttribute="leadingMargin" id="ARA-Bi-tF2"/>
+                            <constraint firstItem="4bp-SU-U2y" firstAttribute="top" secondItem="hN9-FN-rsh" secondAttribute="bottom" constant="8" id="iNN-S6-taM"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Extended" id="KEy-KJ-E7m">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="nQZ-qL-UEh">
+                            <connections>
+                                <segue destination="fYs-hm-7le" kind="unwind" unwindAction="unwindToMainMenu:" id="oZB-yz-ycD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rwJ-Y6-R7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="fYs-hm-7le" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1910" y="401"/>
+            <point key="canvasLocation" x="2722" y="401"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LEe-Eb-Zxn">
@@ -111,6 +135,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RPA-wK-4R2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="458" y="-278"/>
+        </scene>
+        <!--Second Navigation-->
+        <scene sceneID="4oy-75-joF">
+            <objects>
+                <navigationController title="Second Navigation" automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="fM9-Iy-AlG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JuS-yd-2fG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="MWf-BB-Uht">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="WDy-lx-O3d" kind="relationship" relationship="rootViewController" id="u21-2T-DQ1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NJl-g7-nPA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1910" y="401"/>
         </scene>
     </scenes>
 </document>
