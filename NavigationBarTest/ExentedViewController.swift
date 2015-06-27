@@ -8,17 +8,24 @@
 
 import UIKit
 
-class ExentedViewController: UIViewController {
-
+class ExentedViewController: ProgressbarViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        myNavController.showProgressBar()
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func clicked(sender: AnyObject) {
+        myNavController.hideProgressBar()
+        self.performSegueWithIdentifier("unwindToMainMenu", sender: self)
     }
     
 
@@ -32,4 +39,26 @@ class ExentedViewController: UIViewController {
     }
     */
 
+}
+
+class ProgressbarViewController: UIViewController {
+    var myNavController: MyNavigationController!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        myNavController = self.navigationController as! MyNavigationController
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+//        myNavController.showProgressBar()
+        
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+//        myNavController.hideProgressBar()
+        
+        super.viewWillDisappear(animated)
+    }
+    
 }

@@ -13,7 +13,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
     }
+    
+//    override func viewWillAppear(animated: Bool) {
+//        var navController = self.navigationController as! MyNavigationController
+//        navController.myLabel.text = "should work..."
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -23,6 +29,12 @@ class ViewController: UIViewController {
     
     @IBAction func unwindToMainMenu(sender: UIStoryboardSegue) {
     
+    }
+    
+    override func segueForUnwindingToViewController(toViewController: UIViewController, fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue {
+        let segue = CustomUnwindSegue(identifier: identifier, source: fromViewController, destination: toViewController)
+        segue.animationType = .Push
+        return segue
     }
 
 }

@@ -14,6 +14,9 @@
 		CC50B3601B3F23FA00D663F3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC50B35E1B3F23FA00D663F3 /* LaunchScreen.xib */; };
 		CC50B36C1B3F23FA00D663F3 /* NavigationBarTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC50B36B1B3F23FA00D663F3 /* NavigationBarTestTests.swift */; };
 		CC50B3761B3F29AE00D663F3 /* ExentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC50B3751B3F29AE00D663F3 /* ExentedViewController.swift */; };
+		CC50B3781B3F2AC500D663F3 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC50B3771B3F2AC500D663F3 /* CustomNavigationBar.swift */; };
+		CC50B37A1B3F313000D663F3 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC50B3791B3F313000D663F3 /* CustomSegue.swift */; };
+		CC50B37C1B3F366C00D663F3 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC50B37B1B3F366C00D663F3 /* MyNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		CC50B36A1B3F23FA00D663F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC50B36B1B3F23FA00D663F3 /* NavigationBarTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarTestTests.swift; sourceTree = "<group>"; };
 		CC50B3751B3F29AE00D663F3 /* ExentedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExentedViewController.swift; sourceTree = "<group>"; };
+		CC50B3771B3F2AC500D663F3 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		CC50B3791B3F313000D663F3 /* CustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
+		CC50B37B1B3F366C00D663F3 /* MyNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,9 @@
 				CC50B3571B3F23FA00D663F3 /* ViewController.swift */,
 				CC50B3591B3F23FA00D663F3 /* Main.storyboard */,
 				CC50B3751B3F29AE00D663F3 /* ExentedViewController.swift */,
+				CC50B3771B3F2AC500D663F3 /* CustomNavigationBar.swift */,
+				CC50B37B1B3F366C00D663F3 /* MyNavigationController.swift */,
+				CC50B3791B3F313000D663F3 /* CustomSegue.swift */,
 				CC50B35C1B3F23FA00D663F3 /* Images.xcassets */,
 				CC50B35E1B3F23FA00D663F3 /* LaunchScreen.xib */,
 				CC50B3531B3F23FA00D663F3 /* Supporting Files */,
@@ -215,8 +224,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC50B3781B3F2AC500D663F3 /* CustomNavigationBar.swift in Sources */,
 				CC50B3581B3F23FA00D663F3 /* ViewController.swift in Sources */,
 				CC50B3561B3F23FA00D663F3 /* AppDelegate.swift in Sources */,
+				CC50B37C1B3F366C00D663F3 /* MyNavigationController.swift in Sources */,
+				CC50B37A1B3F313000D663F3 /* CustomSegue.swift in Sources */,
 				CC50B3761B3F29AE00D663F3 /* ExentedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
