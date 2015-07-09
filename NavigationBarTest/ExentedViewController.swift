@@ -14,8 +14,23 @@ class ExentedViewController: ProgressbarViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        myNavController.showProgressBar()
+//        myNavController.showProgressBar()
+//        myNavController.showProgressBar()
         
+    }
+    
+    
+    override func viewWillDisappear(animated: Bool) {
+
+        let items = self.myNavController.viewControllers.filter({ m in m as! NSObject == self})
+        if items.count < 1 {
+            myNavController.hideProgressBar()
+        }
+//        if !contains(self.myNavController.viewControllers, self) {
+//        myNavController.hi
+//        }
+        
+        super.viewWillDisappear(animated)
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,8 +39,14 @@ class ExentedViewController: ProgressbarViewController {
     }
     
     @IBAction func clicked(sender: AnyObject) {
-        myNavController.hideProgressBar()
+//        myNavController.hideProgressBar()
         self.performSegueWithIdentifier("unwindToMainMenu", sender: self)
+    }
+    
+    @IBAction func popUpclicked(sender: AnyObject) {
+        myNavController.hideProgressBar()
+        self.enteredPopup = true
+        self.performSegueWithIdentifier("somePopup", sender: self)
     }
     
 
@@ -43,6 +64,7 @@ class ExentedViewController: ProgressbarViewController {
 
 class ProgressbarViewController: UIViewController {
     var myNavController: MyNavigationController!
+    var enteredPopup = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,15 +72,20 @@ class ProgressbarViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-//        myNavController.showProgressBar()
+        if enteredPopup {
+            myNavController.view.setNeedsDisplay()
+            self.enteredPopup = false
+        }
+        else {myNavController.showProgressBar()}
+        
         
         super.viewWillAppear(animated)
     }
     
-    override func viewWillDisappear(animated: Bool) {
-//        myNavController.hideProgressBar()
-        
-        super.viewWillDisappear(animated)
-    }
+//    override func viewWillDisappear(animated: Bool) {
+////        myNavController.hideProgressBar()
+//        
+//        super.viewWillDisappear(animated)
+//    }
     
 }

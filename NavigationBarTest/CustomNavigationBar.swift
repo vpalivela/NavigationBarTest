@@ -40,6 +40,7 @@ class CustomNavigationBar: UINavigationBar {
         self.someView.backgroundColor = UIColor.purpleColor()
         self.someView.userInteractionEnabled = false
         
+        
         self.addSubview(self.someView)
         
         var value: CGFloat = ProgressBarHeight * -1.0
@@ -70,6 +71,9 @@ class CustomNavigationBar: UINavigationBar {
         }
         //
         var viewSize = self.someView.sizeThatFits(CGSizeMake(self.bounds.size.width, 0))
+        let label = UILabel(frame: self.someView.bounds)
+        label.text = "🐱 - 😈 - 👿 - 😡"
+        self.someView.addSubview(label)
         if viewSize != CGRectZero.size {
             self.someView.frame = CGRectMake(0, 44 + ProgressBarHeight, self.frame.size.width, ProgressBarHeight)
         }
